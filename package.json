@@ -1,0 +1,27 @@
+{
+  "name": "funzonemedia_docker_container",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Hesham Reza",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "email-validator": "^2.0.4",
+    "express": "^4.19.2",
+    "express-router": "^0.0.1",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mailgun.js": "^10.2.1",
+    "mongoose": "^8.4.4",
+    "nodemon": "^3.1.4",
+    "otp-generator": "^4.0.1",
+    "router": "^1.3.8"
+  }
+}

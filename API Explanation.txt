@@ -1,0 +1,94 @@
+first step --> sign up --> http://localhost:8080/signup
+
+    to signup you have to give a valid email and the password of your choice
+    {
+        "email": "",
+        "password": ""
+    }
+
+second step --> verify your mail --> http://localhost:8080/verify
+
+    go to your mail id, get the otp,
+    now on body enter your mail and otp
+    {
+        "email": "",
+        "otp": ""
+    }
+
+third step --> login to your account --> http://localhost:8080/login
+
+    to login enter your mail and password in the body
+    
+    if you have not verified your account, you cannot login
+
+    you will get a jwt token as a response, copy that
+    {
+        "email": "",
+        "password": ""
+    }
+
+4th step --> paste the bearer token and get your id --> http://localhost:8080/user
+
+    you can check your details from here and you have to
+
+    to save the contacts and view them, you need the userId, copy the _id that is come as a response
+    {
+        "email": "",
+        "password": ""
+    }
+
+
+contact crud 
+
+// for all the contact crud you need to paste the bearer token for authorization, else you wont be able to access
+
+
+1st step --> create contacts --> http://localhost:8080/createContact
+
+    create a contact
+    "name" is the contact name
+    "email" is the contact email
+    "phone" is the contact phone
+    "address" is the contact address
+    "userId" is the _id, you copied from the http://localhost:8080/user
+    {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "address": "",
+        "userId": ""
+    }
+
+2nd step --> view --> http://localhost:8080/contacts
+
+    you can view the saved contacts here
+
+    "userId" is the _id, you copied from the http://localhost:8080/user
+    "sort" is 1 or -1, 1 for ascending and -1 for descending, by default it is 1
+    "sortBy" is by which field you want to sort as, use any of the field you used for creation of the contacts, with extra you can use are "_id", "createdAt", "updatedAt", by default it is "createdAt"
+    "skip" is how many data you want to skip, it is an integer, by default it is 0
+    "limit" is how many data you want to see, it is an integer, by default it is 10
+
+    {
+        "userId": "",
+        "sort": "",
+        "sortBy": "",
+        "skip": "",
+        "limit": ""
+    }
+
+3rd step --> update --> http://localhost:8080/updateContact/:postId
+
+    to update you need to view the data first and copy it's _id
+    and replace the ":postId" with the value of it in its link
+    and you can update as per following json
+    {
+        "name": "",
+        "email": "",
+        "phone": "",
+        "address": ""
+    }
+
+4th step --> delete --> http://localhost:8080/deleteContact/:postId
+    to delete you need to view the data first and copy it's _id
+    and replace the ":postId" with the value of it in its link
